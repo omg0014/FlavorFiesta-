@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlavorFiesta 🍽️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <span class="logo">🍽️ FlavorFiesta</span>
+    <div class="nav-buttons">
+      <button class="nav-btn" onclick="scrollToSection('home')">🏠 Home</button>
+      <button class="nav-btn" onclick="scrollToSection('menu')">📋 Menu</button>
+      <button class="nav-btn" onclick="scrollToSection('cart')">🛒 Cart</button>
+    </div>
+  </div>
+
+  <!-- Landing -->
+  <header class="landing" id="home">
+    <h1>Welcome to FlavorFiesta 🎉</h1>
+    <p>Explore 20 mouthwatering dishes from 5 categories!</p>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2 class="section-title">🍕 Pizza</h2>
+    <div class="menu-category">
+      <!-- Pizza items -->
+      <div class="food-card">
+        <img src="margherita.jpg" alt="Margherita" class="food-img" />
+        <h3>Margherita</h3>
+        <p>Classic tomato and mozzarella</p>
+        <p><strong>$9.99</strong></p>
+        <button onclick="addToCart('Margherita', 9.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="pepperoni.jpg" alt="Pepperoni" class="food-img" />
+        <h3>Pepperoni</h3>
+        <p>Spicy pepperoni slices</p>
+        <p><strong>$10.99</strong></p>
+        <button onclick="addToCart('Pepperoni', 10.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="quattro_formaggi.jpg" alt="Quattro Formaggi" class="food-img" />
+        <h3>Quattro Formaggi</h3>
+        <p>Four-cheese indulgence</p>
+        <p><strong>$11.49</strong></p>
+        <button onclick="addToCart('Quattro Formaggi', 11.49)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="hawaiian.jpg" alt="Hawaiian" class="food-img" />
+        <h3>Hawaiian</h3>
+        <p>Pineapple and ham fusion</p>
+        <p><strong>$10.49</strong></p>
+        <button onclick="addToCart('Hawaiian', 10.49)">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">🍔 Burger</h2>
+    <div class="menu-category">
+      <!-- Burger items -->
+      <div class="food-card">
+        <img src="cheeseburger.jpg" alt="Cheeseburger" class="food-img" />
+        <h3>Cheeseburger</h3>
+        <p>Classic cheeseburger with lettuce and tomato</p>
+        <p><strong>$8.99</strong></p>
+        <button onclick="addToCart('Cheeseburger', 8.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="bacon_burger.jpg" alt="Bacon Burger" class="food-img" />
+        <h3>Bacon Burger</h3>
+        <p>Juicy bacon and beef patty combo</p>
+        <p><strong>$9.49</strong></p>
+        <button onclick="addToCart('Bacon Burger', 9.49)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="veggie_burger.jpg" alt="Veggie Burger" class="food-img" />
+        <h3>Veggie Burger</h3>
+        <p>Grilled veggies patty with fresh toppings</p>
+        <p><strong>$8.49</strong></p>
+        <button onclick="addToCart('Veggie Burger', 8.49)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="double_patt_burger.jpg" alt="Double Patty Burger" class="food-img" />
+        <h3>Double Patty Burger</h3>
+        <p>Double patty with cheese and condiments</p>
+        <p><strong>$10.99</strong></p>
+        <button onclick="addToCart('Double Patty Burger', 10.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">🍣 Sushi</h2>
+    <div class="menu-category">
+      <!-- Sushi items -->
+      <div class="food-card">
+        <img src="nigiri.jpg" alt="Nigiri" class="food-img" />
+        <h3>Nigiri</h3>
+        <p>Fresh fish on vinegared rice</p>
+        <p><strong>$12.99</strong></p>
+        <button onclick="addToCart('Nigiri', 12.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="maki_roll.jpg" alt="Maki Roll" class="food-img" />
+        <h3>Maki Roll</h3>
+        <p>Traditional rolled sushi with fish and rice</p>
+        <p><strong>$11.99</strong></p>
+        <button onclick="addToCart('Maki Roll', 11.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="sashimi.jpg" alt="Sashimi" class="food-img" />
+        <h3>Sashimi</h3>
+        <p>Thinly sliced raw fish</p>
+        <p><strong>$13.99</strong></p>
+        <button onclick="addToCart('Sashimi', 13.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="california_roll.jpg" alt="California Roll" class="food-img" />
+        <h3>California Roll</h3>
+        <p>Cucumber, avocado, and crab meat roll</p>
+        <p><strong>$10.99</strong></p>
+        <button onclick="addToCart('California Roll', 10.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">🌮 Taco</h2>
+    <div class="menu-category">
+      <!-- Taco items -->
+      <div class="food-card">
+        <img src="carne_asada_taco.jpg" alt="Carne Asada Taco" class="food-img" />
+        <h3>Carne Asada Taco</h3>
+        <p>Grilled beef with salsa</p>
+        <p><strong>$4.99</strong></p>
+        <button onclick="addToCart('Carne Asada Taco', 4.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="fish_taco.jpg" alt="Fish Taco" class="food-img" />
+        <h3>Fish Taco</h3>
+        <p>Fresh fish with lime and avocado</p>
+        <p><strong>$5.49</strong></p>
+        <button onclick="addToCart('Fish Taco', 5.49)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="al_pastor_taco.jpg" alt="Al Pastor Taco" class="food-img" />
+        <h3>Al Pastor Taco</h3>
+        <p>Pork, pineapple, and salsa</p>
+        <p><strong>$5.99</strong></p>
+        <button onclick="addToCart('Al Pastor Taco', 5.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="vegetarian_taco.jpg" alt="Vegetarian Taco" class="food-img" />
+        <h3>Vegetarian Taco</h3>
+        <p>Veggies, guacamole, and salsa</p>
+        <p><strong>$4.49</strong></p>
+        <button onclick="addToCart('Vegetarian Taco', 4.49)">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">🍝 Pasta</h2>
+    <div class="menu-category">
+      <!-- Pasta items -->
+      <div class="food-card">
+        <img src="spaghetti_bolognese.jpg" alt="Spaghetti Bolognese" class="food-img" />
+        <h3>Spaghetti Bolognese</h3>
+        <p>Pasta with rich meat sauce</p>
+        <p><strong>$10.99</strong></p>
+        <button onclick="addToCart('Spaghetti Bolognese', 10.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="fettuccine_alfredo.jpg" alt="Fettuccine Alfredo" class="food-img" />
+        <h3>Fettuccine Alfredo</h3>
+        <p>Creamy alfredo sauce on pasta</p>
+        <p><strong>$11.49</strong></p>
+        <button onclick="addToCart('Fettuccine Alfredo', 11.49)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="penne_arrabbiata.jpg" alt="Penne Arrabbiata" class="food-img" />
+        <h3>Penne Arrabbiata</h3>
+        <p>Spicy tomato sauce with penne</p>
+        <p><strong>$9.99</strong></p>
+        <button onclick="addToCart('Penne Arrabbiata', 9.99)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="lasagna.jpg" alt="Lasagna" class="food-img" />
+        <h3>Lasagna</h3>
+        <p>Layered pasta with meat and cheese</p>
+        <p><strong>$12.49</strong></p>
+        <button onclick="addToCart('Lasagna', 12.49)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart" id="cart">
+    <h2 class="section-title">🛒 Cart</h2>
+    <div id="cart-items"></div>
+    <div id="total-price"></div>
+    <!-- <button id="order-now" onclick="placeOrder()">Order Now</button> -->
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart" id="cart">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cart-items" class="cart-items"></ul>
+    <p class="total">Total: $<span id="cart-total">0.00</span></p>
+    <button class="btn clear" onclick="clearCart()">Clear Cart</button>
+    <button class="btn order" onclick="orderNow()">Order Now</button>
+  </section>
+
+  <script>
+    const cartItems = [];
+    const cartList = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function addToCart(name, price) {
+      cartItems.push({ name, price });
+      updateCart();
+    }
+
+    function updateCart() {
+      cartList.innerHTML = '';
+      let total = 0;
+
+      cartItems.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '❌';
+        removeBtn.className = 'remove-btn';
+        removeBtn.onclick = () => {
+          cartItems.splice(index, 1);
+          updateCart();
+        };
+        li.appendChild(removeBtn);
+        cartList.appendChild(li);
+        total += item.price;
+      });
+
+      cartTotal.textContent = total.toFixed(2);
+    }
+
+    function clearCart() {
+      cartItems.length = 0;
+      updateCart();
+    }
+
+    function orderNow() {
+      if (cartItems.length === 0) {
+        alert('🛒 Your cart is empty!');
+        return;
+      }
+
+      const orderNames = cartItems.map(item => item.name).join(', ');
+      const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+      alert(`🎉 Order Successful!\n\nItems: ${orderNames}\nTotal: $${totalPrice.toFixed(2)}`);
+      clearCart();
+    }
+  </script>
+</body>
+</html>
