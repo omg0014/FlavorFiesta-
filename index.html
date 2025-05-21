@@ -209,6 +209,29 @@
     <button class="btn clear" onclick="clearCart()">Clear Cart</button>
     <button class="btn order" onclick="orderNow()">Order Now</button>
   </section>
+<!-- Footer Feedback Form -->
+<footer class="feedback-footer">
+  <h2>📢 We'd Love Your Feedback!</h2>
+  <p>Tell us what you think about FlavorFiesta.</p>
+  <form class="feedback-form" id="feedback-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Feedback" required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
+</footer>
+
+<!-- Success Popup -->
+<div id="success-popup" class="popup">
+  <div class="popup-content">
+    <h3>🎉 Thank you!</h3>
+    <p>Your feedback has been received.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+
+
 
   <script>
     const cartItems = [];
@@ -262,6 +285,24 @@
       alert(`🎉 Order Successful!\n\nItems: ${orderNames}\nTotal: $${totalPrice.toFixed(2)}`);
       clearCart();
     }
+  const feedbackForm = document.getElementById('feedback-form');
+  const popup = document.getElementById('success-popup');
+
+  feedbackForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // You can handle sending data to a backend here if needed
+
+    // Show success popup
+    popup.style.display = 'flex';
+
+    // Clear form
+    feedbackForm.reset();
+  });
+
+  function closePopup() {
+    popup.style.display = 'none';
+  }
   </script>
 </body>
 </html>
