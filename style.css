@@ -248,3 +248,95 @@ button:active {
     margin: 0 auto;
   }
 }
+/* Feedback Form Styling */
+.feedback-footer {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 2px solid #ddd;
+}
+
+.feedback-footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feedback-footer p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
+}
+
+.feedback-form button {
+  background-color: #ff5722;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #e64a19;
+}
+
+/* Popup Styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #4caf50;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
