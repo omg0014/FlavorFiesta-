@@ -32,6 +32,8 @@ Browse a delicious menu, add items to your cart, place an order, and even share 
 
 ## 🚀 Getting Started
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/flavorfiesta.git
+Open the project directly in your browser using this link:  
+[https://omg0014.github.io/FlavorFiesta-/](https://omg0014.github.io/FlavorFiesta-/)  
+
+*(No installation or server setup required!)*  
+
